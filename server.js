@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static('./public'));
 
 // Routes
-require('./routes/api-routes.js')(app);
+// require('./routes/api-routes.js')(app);
 
 // Starts the Server
 db.sequelize.sync().then(function(){
