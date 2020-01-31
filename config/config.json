@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "mw03330333",
+    "password": "root",
     "database": "project_two_development_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "test": {
     "username": "root",
