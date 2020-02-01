@@ -1,0 +1,32 @@
+body{
+
+padding: 0;
+margin: 0;
+background-color: ghostwhite;
+font-family: 'Berkshire Swash', cursive;
+}
+.container {
+width: 600px;
+height: 400px;
+position: relative;
+margin: 170px auto;
+}
+.container nav{
+  width: 600px;
+  height: 400px;
+}
+.text{
+color: gold;
+font-size: 50px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
+
+
+.navbar-toggler {
+  font-size: 12px;
+  padding: 8px 10px;
+  color: gray;
