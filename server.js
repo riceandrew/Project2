@@ -2,6 +2,7 @@
 const express = require('express');
 const db = require('./models');
 
+
 // Express App Setup
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -14,10 +15,12 @@ app.use(express.json());
 app.use(express.static('./public'));
 
 // Routes
-require('./routes/api-routes.js')(app);
+require('./routes/api-routes.js')(app)
+require('./routes/html-routes.js')(app);
+require('./routes/breweries-routes.js')(app);
 
 // Starts the Server
-db.sequelize.sync().then(function(){
+db.sequelize.sync({}).then(function(){
 
     app.listen(PORT, function() {
         console.log('App listening on PORT ' + PORT);
