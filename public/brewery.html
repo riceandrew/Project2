@@ -2,30 +2,75 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Brewery Name</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Find a Brewery!" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+    </div>
+
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="#">Logout </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </nav>
+
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
+
+    <div class="row" style="background-color: darkgreen;">
+      <h2>Brewery Name</h2>
     </div>
-  </div>
-</nav>
-  <div class="container">
+
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+
+      <div class="col-4" style="background-color: darkorange;">
+        <h2>Brewery Photo</h2>
       </div>
+
+      <div class="col-8">
+
+        <div class="row">
+
+          <ul class="list-group">
+            <li class="list-group-item" style="background-color: firebrick;">Address</li>
+            <li class="list-group-item" style="background-color: forestgreen;">Website</li>
+          </ul>
+
+        </div>
+
+        <div class="row" style="background-color: darkturquoise;">
+          <h2>Rank: Number</h2>
+        </div>
+
+      </div>
+
     </div>
+
+    <div class="row">
+      <h2>For loop amount of beers that are associated with this brewery (Carasouel on basketball project).</h2>
+    </div>
+
   </div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>

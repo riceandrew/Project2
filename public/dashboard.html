@@ -1,83 +1,91 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
-  <title>Brewery</title>
+  <title>Dashboard</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="js/css/dashboard.css" rel="stylesheet">
- 
-
-   <!-- Bootstrap core CSS -->
-   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-   <!-- Custom fonts for this template -->
-   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Find a Brewery!" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
 
-     <!-- Navigation -->
+      </div>
 
-<nav>
-    <div class="alert alert-warning" role="alert">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary">
-              <a class="nav-link js-scroll-trigger" href="signup.html">Sign Up</a> 
-            </label>
-            <label class="btn btn-secondary">
-                <a class="nav-link js-scroll-trigger" href="login.html">Login</a> 
-              </label>
-            <label class="btn btn-secondary">
-                <a class="nav-link js-scroll-trigger" href="brewery.html">Brewery</a> 
-              </label>
+      <a class="navbar-brand" href="#">Logout </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+    </nav>
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col" style="background-color: crimson;">
+        <h2>User Information</h2>
+      </div>
+
+      <div class="col-8">
+
+        <div class="row">
+
+          <div class="col" style="background-color: cyan;">
+            <h2>Google Maps</h2>
           </div>
-  </nav>
 
-  <!-- Header -->
+        </div>
 
-  <header class="bg-primary text-white">
-      <div class="container text-center">
-        <h1>Breweries in Austin</h1>
-        <p class="lead">The #1 way to find you favorite BREWERY</p>
+        <div class="row">
 
+          <div class="col" style="background-color: darkgoldenrod;">
 
+            <h2>Breweries Visited</h2>
+            <div class="list-group">
+    
+              <a href="#" class="list-group-item list-group-item-action">Brewery 1</a>
+              <a href="#" class="list-group-item list-group-item-action">Brewery 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Brewery 3</a>
+    
+            </div>
+    
+          </div>
 
-      
-    </header>
-  
+        </div>
 
-  <!-- Featured Project Row -->
-  <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-   
-      <div class="col-xl-4 col-lg-3">
-        <div class="featured-text text-center text-lg-left">
-      
+      </div>
 
-      
+      <div class="col" style="background-color: darkcyan;">
+        <h2>Favorite Beers</h2>
+
+        <div class="list-group">
+
+          <a href="#" class="list-group-item list-group-item-action">Beer 1</a>
+          <a href="#" class="list-group-item list-group-item-action">Beer 2</a>
+          <a href="#" class="list-group-item list-group-item-action">Beer 3</a>
+
+        </div>
+
+      </div>
+
     </div>
 
-
-  <!-- Project One Row -->
-  
-       
- 
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/dashboard.js"></script>
 
-
 </body>
 
 </html>
-
-
-
