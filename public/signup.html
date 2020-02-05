@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Sign Up</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="css/signup.css" rel="stylesheet">
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -19,24 +19,18 @@
 <!-- Nav bar -->
 
 
-<nav class="navbar navbar-light bg-light">
    
+<!-- Header -->
 
-    <div class="alert alert-warning" role="alert">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary">
-              <a class="nav-link js-scroll-trigger" href="signup.html">Sign Up</a> 
-            </label>
-            <label class="btn btn-secondary">
-                <a class="nav-link js-scroll-trigger" href="login.html">Login</a> 
-              </label>
-            <label class="btn btn-secondary">
-                <a class="nav-link js-scroll-trigger" href="brewery.html">Brewery</a> 
-              </label>
+<header class="text-white">
+    <div class="container text-center">
+      <h1>Welcome to to Sign up</h1>
+      <p class="lead">The #1 way to find you favorite BREWERY</p>
+        </div>
+    </div>        
+</header>
+  
 
-          </div>
-
-  </nav>
   
 
 
@@ -45,15 +39,14 @@
 
  <header class="bg-primary text-white">
       <div class="container text-center">
-        <h1>Welcome to Sign up !</h1>
+        
           </div>
       </div>
 
   <div class="container register">
       <div class="row">
           <div class="col-md-3 register-left">
-              <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-              <h3>Welcome</h3>
+            <a href="https://ibb.co/d5jrQLH"><img src="https://i.ibb.co/ZMGVhYb/beerlogo.jpg" alt="beerlogo" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />              <h3>Cheers !</h3>
               <p>You are 30 seconds away from you favorite beer !!!</p>
           </div>
           <div class="col-md-6 register-right">
@@ -62,7 +55,7 @@
               </ul>
               <div class="tab-content" id="myTabContent">
                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <h3 class="register-heading">Your Info</h3>
+                      <h4 class="register-heading">Your Info</h4>
                       <div class="row register-form">
                           <div class="col-md-6">
                               <div class="form-group">
@@ -85,20 +78,24 @@
                               
                               <div class="form-group">
                                   <div class="maxl">
-                                      <label class="radio inline"> 
+                                      <label class="btn btn-primary"> 
                                           <input type="radio" name="gender" value="male" checked>
                                           <span> Male </span> 
                                       </label>
-                                      <label class="radio inline"> 
-                                          <input type="radio" name="gender" value="female">
-                                          <span>Female </span> 
+                                      <label class="btn btn-primary"> 
+                                          <input type="radio" name="gender"  value="female">
+                                          <span>Female </span>
+ 
                                       </label>
-                                  </div>
+                                      <div class="col-md-3">
+                                      <button type="submit" class="btn btn-primary" value="Register">Login</button>
+                                        </div>
+                                    </div>
                               </div>
                           </div>
                         
                           <div class="col-mx-3">
-                          <img src="img/beer.jpg" alt="Card image cap" class="card-img-bottom"/>
+                          <img src="assets/img/brew.jpg" alt="Card image cap" class="card-img-bottom"/>
                           </div>
 
                   <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
