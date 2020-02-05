@@ -15,22 +15,19 @@
 
 
 
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="Search" value="search" placeholder="Find a Brewery!" aria-label="Search">
-          <button class="btn btn-primary" type="submit">Search</button>
+          <button class="btn btn-primary" type="submit">Find a Brewery ...</button>
         </form>
 
       </div>
 
       <a class="navbar-brand" href="dashboard.html">Dashboard</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="brewery.html">Find a Brewery</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,14 +45,16 @@
 
     <div class="row">
 
-      <div class="col" style="background-color: crimson;">
+      <div class="col4" text="white" style="background-color: dodgerblue;">
         <h2>User Information</h2>
 
 
-        <div class="card" style="width: 18rem;">
-          <img src="assets/img/beer.jpg" class="card-img-top" alt="...">
+        <div class="col" class="card" style="width: 18rem;">
+          <img src="assets/img/iggybeer.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">ismel</p>
+            <p class="card-text">Iggy</p>
+            <p class="card-text">Favorite beer: XX</p>
+
           </div>
         </div>
       </div>
@@ -66,15 +65,13 @@
 
         <div class="row">
 
-          <div class="col" style="background-color: cyan;">
-            <h2>Google Maps</h2>
-          </div>
+          
 
         </div>
 
         <div class="row">
 
-          <div class="col" style="background-color: darkgoldenrod;">
+          <div class="col" style="background-color: dodgerblue;">
 
             <h2>Breweries Visited</h2>
             <div class="list-group">
@@ -83,6 +80,10 @@
               <a href="#" class="list-group-item list-group-item-action">Brewery 2</a>
               <a href="#" class="list-group-item list-group-item-action">Brewery 3</a>
     
+              <div class="col" style="background-color: dodgerblue;">
+                <h2>Google Maps</h2>
+              </div>
+
             </div>
     
           </div>
@@ -91,7 +92,7 @@
 
       </div>
 
-      <div class="col" style="background-color: darkcyan;">
+      <div class="col" style="background-color: dodgerblue;">
         <h2>Favorite Beers</h2>
 
         <div class="list-group">
@@ -111,7 +112,7 @@
 </div>
                         
 <div class="col-mx-3">
-<img src="assets/img/brew.jpg" alt="Card image cap" class="card-img-bottom"/>
+<img src="assets/img/drinkbeer.jpg" alt="Card image cap" class="card-img-bottom"/>
 </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
