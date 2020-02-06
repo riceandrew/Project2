@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+      height: 90%;
+    }
+    #breweries {
+    }
+    
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 id="breweris">Breweries of Austin Texas</h3>
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The lat and longs
+      var Austin = { lat: 30.2672, lng: -97.7431 };
+      var JesterKing = { lat: 30.233458, lng: -97.99602 };
+      var FiveOneTwo = { lat: 30.223736, lng: -97.76981 };
+      var Celis = { lat: 30.380220, lng: -97.715858 };
+      var FourthTap = { lat: 30.385240, lng: -97.711860 };
+      var Oddwood = { lat: 30.286469, lng: -97.705215 };
+      var Pinthouse = { lat: 30.318712, lng: -97.73949 };
+      var SH = { lat: 30.276745, lng: -97.670265 };
+      var Beerworks = { lat: 30.379877, lng: -97.72945 };
+      var hopsNgrain = { lat: 30.258364, lng: -97.71267 };
+      var stElmo = { lat: 30.216000, lng: -97.761833 };
+      var draughtHouse = { lat: 30.31011, lng: -97.742645 };
+      var oasis = { lat: 30.405298, lng: -97.87343 };
+      var lastStand = { lat: 30.236677, lng: -98.0107 };
+      var adelberts = { lat: 30.382534, lng: -97.72133 };
+      var skullMech = { lat: 30.213955, lng: -97.75534 };
+      var laz = { lat: 30.261581, lng: -97.722176 };
+      var blueOwl = { lat: 30.254686, lng: -97.71762 };
+      var brewerTable = { lat: 30.252998, lng: -97.70071 };
+      var abgb = { lat: 30.234543, lng: -97.7435 };
+      var zilker = { lat: 30.262308, lng: -97.72432 };
+      var blackStar = { lat: 30.33889, lng: -97.7188 };
+      var brewtorium = { lat: 30.325731, lng: -97.71784 };
+      var friendsAndAllies = { lat: 30.26328, lng: -97.69702 };
+      var hiSign = { lat: 30.229328, lng: -97.682304 };
+      var independence = { lat: 30.211884, lng: -97.73721 };
+      var infamous = { lat: 30.405897, lng: -97.92609 };
+      var nomadic = { lat: 30.224644, lng: -97.759995 };
+      var orf = { lat: 30.213057, lng: -97.73232 };
+
+
+
+      // The map, centered at Austin
+      var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 11, center: Austin });
+
+      // Celis marker
+
+      //The content for Celis
+      var celisContent = '<strong>Celis Brewing</strong><br>\
+                          10001 Metric Blvd, Austin, TX 78758<br>\
+                          <a href="https://goo.gl/maps/vd98NWiiecU2wfX2A">Get Directions</a>';
+      //Section of the code that creates the info window
+      var infoWindowCelis = new google.maps.InfoWindow({
+        content: celisContent
+      });
+      //Creates Celis marker
+      var celisMarker = new google.maps.Marker({ position: Celis, map: map });
+      //Creates 'click' function
+      celisMarker.addListener('click', function () {
+        infoWindowCelis.open(map, celisMarker);
+      });
+
+      //4th Tap Marker
+      var fourthTapContent = '<strong>4th Tap Brewing Coop</strong><br>\
+                              10615 METRIC BLVD, AUSTIN, TX, 78758<br>\
+                             <a href="https://g.page/4thtap?share">Get Directions</a>';
+      //Section of the code that creates the info window
+      var infoWindowFourthTap = new google.maps.InfoWindow({
+        content: fourthTapContent
+      });
+      //Creates Celis marker
+      var fourthTapMarker = new google.maps.Marker({ position: FourthTap, map: map });
+      //Creates 'click' function
+      fourthTapMarker.addListener('click', function () {
+        infoWindowFourthTap.open(map, fourthTapMarker);
+      });
+
+      //Jester King Brewing Marker
+      var JesterKingContent = '<strong>Jester King Brewing Co.</strong><br>\
+                                13005 FITZHUGH RD, AUSTIN, TX, 78736<br>\
+                                <a href="https://g.page/jesterking?share">Get Directions</a>';
+      //create info window
+      var infowindowJesterKing = new google.maps.InfoWindow({
+        content: JesterKingContent
+      });
+      //create marker
+      var jesterKingMarker = new google.maps.Marker({ position: JesterKing, map: map });
+      //create 'click' function
+      jesterKingMarker.addListener('click', function () {
+        infowindowJesterKing.open(map, jesterKingMarker);
+      });
+
+
+      //512 Brewing Marker
+      var FiveOneTwoContent = '<strong>512 Brewing Co.</strong><br>\
+                                407 RADAM LN, AUSTIN, TX, 78745<br>\
+                                <a href="https://g.page/512brewing?share">Get Directions</a>';
+      //create info window
+      var infowindowFiveOneTwo = new google.maps.InfoWindow({
+        content: FiveOneTwoContent
+      });
+      //create marker
+      var fiveOneTwoMarker = new google.maps.Marker({ position: FiveOneTwo, map: map });
+      //create 'click' function
+      fiveOneTwoMarker.addListener('click', function () {
+        infowindowFiveOneTwo.open(map, fiveOneTwoMarker);
+      });
+
+      //Oddwood Ales Marker
+      var oddwoodContent = '<strong>Oddwood Ales</strong><br>\
+                                3108 MANOR RD, AUSTIN, TX, 78723<br>\
+                                <a href="https://goo.gl/maps/dxaWgeSUTxkjCksK9">Get Directions</a>';
+      //create info window
+      var infowindowOddwood = new google.maps.InfoWindow({
+        content: oddwoodContent
+      });
+      //create marker
+      var OddwoodMarker = new google.maps.Marker({ position: Oddwood, map: map });
+      //create 'click' function
+      OddwoodMarker.addListener('click', function () {
+        infowindowOddwood.open(map, OddwoodMarker);
+      });
+
+      //Pinthouse Marker
+      var pinthouseContent = '<strong>Pinthouse</strong><br>\
+                            4729 Burnet Rd, Austin, TX 78756<br>\
+                            <a href="https://goo.gl/maps/cB9iewHtvHPdgPVG6">Get Directions</a>';
+      //create info window
+      var infowindowPinthouse = new google.maps.InfoWindow({
+        content: pinthouseContent
+      });
+      //create marker
+      var pinthouseMarker = new google.maps.Marker({ position: Pinthouse, map: map });
+      //create 'click' function
+      pinthouseMarker.addListener('click', function () {
+        infowindowPinthouse.open(map, pinthouseMarker);
+      });
+
+      //Southern Heights Marker
+      var southernHeightsContent = '<strong>Southern Heights</strong><br>\
+      6014 Techni Center Dr ste 2-101, Austin, TX 78721<br>\
+                            <a href="https://goo.gl/maps/h6qUTCb9kLGAKGPj6">Get Directions</a>';
+      //create info window
+      var infowindowSouthernHeights = new google.maps.InfoWindow({
+        content: southernHeightsContent
+      });
+      //create marker
+      var southernHeightsMarker = new google.maps.Marker({ position: SH, map: map });
+      //create 'click' function
+      southernHeightsMarker.addListener('click', function () {
+        infowindowSouthernHeights.open(map, southernHeightsMarker);
+      });
+
+
+      //Beerworks Marker
+      var beerworksContent = '<strong>Austin Beerworks</strong><br>\
+      3001 Industrial Terrace, Austin, TX 78758<br>\
+                                    <a href="https://goo.gl/maps/4j4jnJMYHsrENDx17">Get Directions</a>';
+      //create info window
+      var infowindowBeerworks = new google.maps.InfoWindow({
+        content: beerworksContent
+      });
+      //create marker
+      var beerworksMarker = new google.maps.Marker({ position: Beerworks, map: map });
+      //create 'click' function
+      beerworksMarker.addListener('click', function () {
+        infowindowBeerworks.open(map, beerworksMarker);
+      });
+
+      //Hops and Grain Marker
+      var HopsNGrainContent = '<strong>Hops and Grain Brewing</strong><br>\
+                                507 Calles St #101, Austin, TX 78702<br>\
+                                <a href="https://g.page/hopsandgrainaustin?share">Get Directions</a>';
+      //create info window
+      var infowindowHopsNGrain = new google.maps.InfoWindow({
+        content: HopsNGrainContent
+      });
+      //create marker
+      var HopsNGrainMarker = new google.maps.Marker({ position: hopsNgrain, map: map });
+      //create 'click' function
+      HopsNGrainMarker.addListener('click', function () {
+        infowindowHopsNGrain.open(map, HopsNGrainMarker);
+      });
+
+      //St. Elmo Marker
+      var stElmoContent = '<strong>St. Elmo Brewing Co.</strong><br>\
+            440 E St Elmo Rd G-2, Austin, TX 78745<br>\
+                                <a href="https://goo.gl/maps/iaDaEYWvhV6gux7MA">Get Directions</a>';
+      //create info window
+      var infowindowStElmo = new google.maps.InfoWindow({
+        content: stElmoContent
+      });
+      //create marker
+      var stElmoMarker = new google.maps.Marker({ position: stElmo, map: map });
+      //create 'click' function
+      stElmoMarker.addListener('click', function () {
+        infowindowStElmo.open(map, stElmoMarker);
+      });
+
+      //draughtHouse Marker
+      var draughtHouseContent = '<strong>Draught House Pub & Brewery</strong><br>\
+            4112 Medical Pkwy, Austin, TX 78756<br>\
+                                <a href="https://g.page/draughthouse?share">Get Directions</a>';
+      //create info window
+      var infowindowDraughtHouse = new google.maps.InfoWindow({
+        content: draughtHouseContent
+      });
+      //create marker
+      var draughtHouseMarker = new google.maps.Marker({ position: draughtHouse, map: map });
+      //create 'click' function
+      draughtHouseMarker.addListener('click', function () {
+        infowindowDraughtHouse.open(map, draughtHouseMarker);
+      });
+
+      //oasis Marker
+      var oasisContent = '<strong>Oasis Texas Brewing Company</strong><br>\
+      6650 Comanche Trail Suite #301, Austin, TX 78732<br>\
+                                <a href="https://goo.gl/maps/VDzjpAffvAwUi6HW7">Get Directions</a>';
+      //create info window
+      var infowindowOasis = new google.maps.InfoWindow({
+        content: oasisContent
+      });
+      //create marker
+      var oasisMarker = new google.maps.Marker({ position: oasis, map: map });
+      //create 'click' function
+      oasisMarker.addListener('click', function () {
+        infowindowOasis.open(map, oasisMarker);
+      });
+
+      //lastStand Marker
+      var lastStandContent = '<strong>Last Stand Brewing Company</strong><br>\
+            12345 Pauls Valley Rd Building i, Austin, TX 78737<br>\
+                                <a href="https://goo.gl/maps/9SLshFVkqkJPG4Tn6">Get Directions</a>';
+      //create info window
+      var infowindowLastStand = new google.maps.InfoWindow({
+        content: lastStandContent
+      });
+      //create marker
+      var lastStandMarker = new google.maps.Marker({ position: lastStand, map: map });
+      //create 'click' function
+      lastStandMarker.addListener('click', function () {
+        infowindowLastStand.open(map, lastStandMarker);
+      });
+
+      //adelberts Marker
+      var adelbertsContent = '<strong>Adelberts Brewing Company</strong><br>\
+            2314 Rutland Dr #100, Austin, TX 78758<br>\
+                                <a href="https://goo.gl/maps/QkTfgijdZN5CTjay8">Get Directions</a>';
+      //create info window
+      var infowindowAdelberts = new google.maps.InfoWindow({
+        content: adelbertsContent
+      });
+      //create marker
+      var adelbertsMarker = new google.maps.Marker({ position: adelberts, map: map });
+      //create 'click' function
+      adelbertsMarker.addListener('click', function () {
+        infowindowAdelberts.open(map, adelbertsMarker);
+      });
+
+      //skullMech Marker
+      var skullMechContent = '<strong>Skull Mechanix Brewing</strong><br>\
+      1005 E St Elmo Rd #2, Austin, TX 78745<br>\
+                                <a href="https://goo.gl/maps/DT5L4mDUtFgGBvsv9">Get Directions</a>';
+      //create info window
+      var infowindowSkullMech = new google.maps.InfoWindow({
+        content: skullMechContent
+      });
+      //create marker
+      var skullMechMarker = new google.maps.Marker({ position: skullMech, map: map });
+      //create 'click' function
+      skullMechMarker.addListener('click', function () {
+        infowindowSkullMech.open(map, skullMechMarker);
+      });
+
+      //Lazerous Marker
+      var lazContent = '<strong>Lazarus Brewing Co.</strong><br>\
+            1902 E 6th St, Austin, TX 78702<br>\
+                                <a href="https://g.page/lazarusbrewing?share">Get Directions</a>';
+      //create info window
+      var infowindowLaz = new google.maps.InfoWindow({
+        content: lazContent
+      });
+      //create marker
+      var lazMarker = new google.maps.Marker({ position: laz, map: map });
+      //create 'click' function
+      lazMarker.addListener('click', function () {
+        infowindowLaz.open(map, lazMarker);
+      });
+
+      //Blue Owl Marker
+      var blueOwlContent = '<strong>Blue Owl Brewing</strong><br>\
+      2400 E Cesar Chavez St #300, Austin, TX 78702<br>\
+                                <a href="https://goo.gl/maps/exXr9bLrntJ3HJneA">Get Directions</a>';
+      //create info window
+      var infowindowBlueOwl = new google.maps.InfoWindow({
+        content: blueOwlContent
+      });
+      //create marker
+      var blueOwlMarker = new google.maps.Marker({ position: blueOwl, map: map });
+      //create 'click' function
+      blueOwlMarker.addListener('click', function () {
+        infowindowBlueOwl.open(map, blueOwlMarker);
+      });
+
+      //Brewer's Table Marker
+      var brewersTableContent = '<strong>The Brewers Table</strong><br>\
+            4715 E 5th St, Austin, TX 78702<br>\
+                                <a href="https://g.page/TheBrewersTable?share">Get Directions</a>';
+      //create info window
+      var infowindowBrewersTable = new google.maps.InfoWindow({
+        content: brewersTableContent
+      });
+      //create marker
+      var brewersTableMarker = new google.maps.Marker({ position: brewerTable, map: map });
+      //create 'click' function
+      brewersTableMarker.addListener('click', function () {
+        infowindowBrewersTable.open(map, brewersTableMarker);
+      });
+
+      //ABGB Marker
+      var ABGBContent = '<strong>ABGB</strong><br>\
+            1305 W Oltorf St, Austin, TX 78704<br>\
+                                <a href="https://g.page/TheABGB?share">Get Directions</a>';
+      //create info window
+      var infowindowABGB = new google.maps.InfoWindow({
+        content: ABGBContent
+      });
+      //create marker
+      var ABGBMarker = new google.maps.Marker({ position: abgb, map: map });
+      //create 'click' function
+      ABGBMarker.addListener('click', function () {
+        infowindowABGB.open(map, ABGBMarker);
+      });
+
+      //zilker Marker
+      var zilkerContent = '<strong>Zilker Brewing Co.</strong><br>\
+      1701 E 6th St, Austin, TX 78702<br>\
+                                <a href="https://g.page/ZilkerBrewing?share">Get Directions</a>';
+      //create info window
+      var infowindowZilker = new google.maps.InfoWindow({
+        content: zilkerContent
+      });
+      //create marker
+      var zilkerMarker = new google.maps.Marker({ position: zilker, map: map });
+      //create 'click' function
+      zilkerMarker.addListener('click', function () {
+        infowindowZilker.open(map, zilkerMarker);
+      });
+
+      //blackStar Marker
+      var blackStarContent = '<strong>Black Star Brewing Coop.</strong><br>\
+            7020 Easy Wind Dr, Austin, TX 78752<br>\
+                                <a href="https://goo.gl/maps/v2eQG7WmbrFQCLDy8">Get Directions</a>';
+      //create info window
+      var infowindowBlackStar = new google.maps.InfoWindow({
+        content: blackStarContent
+      });
+      //create marker
+      var blackStarMarker = new google.maps.Marker({ position: blackStar, map: map });
+      //create 'click' function
+      blackStarMarker.addListener('click', function () {
+        infowindowBlackStar.open(map, blackStarMarker);
+      });
+
+      //brewtorium Marker
+      var brewtoriumContent = '<strong>The Brewtorium</strong><br>\
+            6015 Dillard Cir A, Austin, TX 78752<br>\
+                                <a href="https://goo.gl/maps/USxxXixiQpJT1fYD6">Get Directions</a>';
+      //create info window
+      var infowindowBrewtorium = new google.maps.InfoWindow({
+        content: brewtoriumContent
+      });
+      //create marker
+      var brewtoriumMarker = new google.maps.Marker({ position: brewtorium, map: map });
+      //create 'click' function
+      brewtoriumMarker.addListener('click', function () {
+        infowindowBrewtorium.open(map, brewtoriumMarker);
+      });
+
+      //friendsAndAllies Marker
+      var friendsAndAlliesContent = '<strong>Friends and Allies Brewing</strong><br>\
+            979 Springdale Rd, Austin, TX 78702<br>\
+                                <a href="https://goo.gl/maps/Ba5rApZoTWcJkUwSA">Get Directions</a>';
+      //create info window
+      var infowindowFriendsandAllies = new google.maps.InfoWindow({
+        content: friendsAndAlliesContent
+      });
+      //create marker
+      var friendsAndAlliesMarker = new google.maps.Marker({ position: friendsAndAllies, map: map });
+      //create 'click' function
+      friendsAndAlliesMarker.addListener('click', function () {
+        infowindowFriendsandAllies.open(map, friendsAndAlliesMarker);
+      });
+
+      //hiSign Marker
+      var hiSignContent = '<strong>Hi Sign Brewing Co.</strong><br>\
+                  1201 Bastrop Hwy, Austin, TX 78742<br>\
+                                <a href="https://goo.gl/maps/QX3BG8BfL1NTupj58">Get Directions</a>';
+      //create info window
+      var infowindowHiSign = new google.maps.InfoWindow({
+        content: hiSignContent
+      });
+      //create marker
+      var hiSignMarker = new google.maps.Marker({ position: hiSign, map: map });
+      //create 'click' function
+      hiSignMarker.addListener('click', function () {
+        infowindowHiSign.open(map, hiSignMarker);
+      });
+
+      //independence Marker
+      var independenceContent = '<strong>Independence Brewing Co.</strong><br>\
+                        3913 Todd Ln #607, Austin, TX 78744<br>\
+                                <a href="https://goo.gl/maps/9VWfk6G4qMoAdrN59">Get Directions</a>';
+      //create info window
+      var infowindowIndependence = new google.maps.InfoWindow({
+        content: independenceContent
+      });
+      //create marker
+      var independenceMarker = new google.maps.Marker({ position: independence, map: map });
+      //create 'click' function
+      independenceMarker.addListener('click', function () {
+        infowindowIndependence.open(map, independenceMarker);
+      });
+
+      //infamous Marker
+      var infamousContent = '<strong>Infamous Brewing Co.</strong><br>\
+            4602 Weletka Dr, Austin, TX 78734<br>\
+                                <a href="https://goo.gl/maps/cr6JVmwYp8LkoctL6">Get Directions</a>';
+      //create info window
+      var infowindowInfamous = new google.maps.InfoWindow({
+        content: infamousContent
+      });
+      //create marker
+      var infamousMarker = new google.maps.Marker({ position: infamous, map: map });
+      //create 'click' function
+      infamousMarker.addListener('click', function () {
+        infowindowInfamous.open(map, infamousMarker);
+      });
+
+      //Nomadic Marker
+      var nomadicContent = '<strong>Nomadic Brewing Co.</strong><br>\
+                  3804 Woodbury Dr suite a, Austin, TX 78704<br>\
+                                <a href="https://g.page/nomadicbeerworks?share">Get Directions</a>';
+      //create info window
+      var infowindowNomadic = new google.maps.InfoWindow({
+        content: nomadicContent
+      });
+      //create marker
+      var nomadicMarker = new google.maps.Marker({ position: nomadic, map: map });
+      //create 'click' function
+      nomadicMarker.addListener('click', function () {
+        infowindowNomadic.open(map, nomadicMarker);
+      });
+
+            //Orf Marker
+            var orfContent = '<strong>Orf Brewing Co.</strong><br>\
+            4700 Burleson Rd unit f, Austin, TX 78744<br>\
+                                <a href="https://g.page/orfbrewing?share">Get Directions</a>';
+      //create info window
+      var infowindowOrf = new google.maps.InfoWindow({
+        content: orfContent
+      });
+      //create marker
+      var orfMarker = new google.maps.Marker({ position: orf, map: map });
+      //create 'click' function
+      orfMarker.addListener('click', function () {
+        infowindowOrf.open(map, orfMarker);
+      });
+
+
+
+
+
+
+
+    }
+  </script>
+  <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=[API key goes here]&callback=initMap">
+    </script>
+</body>
+
+</html>
