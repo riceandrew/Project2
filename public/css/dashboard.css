@@ -1,0 +1,112 @@
+body{
+
+padding: 0;
+margin: 0;
+background-color: #fc7516;
+font-family: "Source Sans Pro","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+.container {
+width: 680px;
+height: 120px;
+position: relative;
+margin: 90px relative;
+}
+.container nav{
+  width: 60px;
+  height: 2px;
+}
+.text{
+color: gold;
+font-size: 40px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
+
+#col1
+.navbar-toggler {
+  font-size: 15px;
+  padding: 8px 10px;
+  color: gray;
+}
+
+
+  a {
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+  }
+  .text-white {
+    color: white;
+}
+
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col {
+  background-color: #ff7701;
+  border-color: black;
+  color: white;
+}
+.col1 {
+  background-color: dodgerblue;
+  border-color: black;
+  color: white;
+}
+.col2 {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+.col3 {
+  background-color: dodgerblue;
+  border-color: black;
+  color: white;
+}
+.col4 {
+  background-color: dodgerblue;
+  border-color: black;
+  color: white;
+}
+
+#userInfo {
+  background-color: dodgerblue;
+  text-size-adjust: auto;
+  font-size: 34px;
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: white;
+  text-align: center;
+
+}
+#info  {
+  background-color: dodgerblue;
+  text-size-adjust: auto;
+  font-size: 34px;
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: white;
+  text-align: center;
+
+
+}
+
+
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  background-color: #ff7701;
+  border: 1px solid rgba(0,0,0,.125);
+}
+h2 {
+  background-color: dodgerblue;
+}

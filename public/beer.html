@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Add a Beer!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="css/beer.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav 
+    
+    class="navbar navbar-expand-lg navbar-light bg-light">
+      
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Find a brewery..." aria-label="Search">
+            <button class="btn btn-primary" type="submit">Find a Brewery</button>
+
+          </form>
+    
+        </div>
+    
+
+        
+        <a class="navbar-brand" href="dashboard.html">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="beer.html">Add a Beer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Logout </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+      </nav>
+
+      <header class="col" class="bg-primary text-white">
+        <div class="container text-center">
+          <h1>Enter you brewery info</h1>
+          <p class="lead">The #1 way to find you favorite BREWERY</p>
+            </div>
+        </div>
+</header>
+      
+    
+  <div class="container">
+
+    <div class="row">
+
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="addon-wrapping">Brewery Name</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Enter name here..." aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="addon-wrapping">Beer Name</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Enter name here..." aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+
+        <div class="input-group">
+
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Beer Style</span>
+                </div>
+
+                <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Select From the Dropdown:">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+
+        </div>
+
+        <div class="input-group">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Beer Rating</span>
+            </div>
+
+            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Select From the Dropdown:">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">1</a>
+                <a class="dropdown-item" href="#">2</a>
+                <a class="dropdown-item" href="#">3</a>
+                <a class="dropdown-item" href="#">4</a>
+                <a class="dropdown-item" href="#">5</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Beer Cost</span>
+            </div>
+
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Dollar amount here...">
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+        </div>
+        
+      
+        <img src="assets/img/drinkbeer.jpg" width="3000" height="580" class="d-inline-block align-top" alt="">
+  
+
+
+    </div>
+
+  </div>
+
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/beers.js"></script>
+
+</body>
+
+</html>

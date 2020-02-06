@@ -2,47 +2,118 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Sign Up</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="css/signup.css" rel="stylesheet">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+
+<!-- Nav bar -->
+
+
+   
+<!-- Header -->
+
+<header class="text-white">
+    <div class="container text-center">
+      <h1>Welcome to to Sign up</h1>
+      <p class="lead">The #1 way to find you favorite BREWERY</p>
+        </div>
+    </div>        
+</header>
+  
+
+  
+
+
+
+<!-- Header -->
+
+ <header class="bg-primary text-white">
+      <div class="container text-center">
+        
+          </div>
       </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form class="signup">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
+
+  <div class="container register">
+      <div class="row">
+          <div class="col-md-3 register-left">
+            <a href="https://ibb.co/d5jrQLH"><img src="https://i.ibb.co/ZMGVhYb/beerlogo.jpg" alt="beerlogo" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'></a><br />              <h3>Cheers !</h3>
+              <p>You are 30 seconds away from you favorite beer !!!</p>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          <div class="col-md-6 register-right">
+              <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                  
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <h4 class="register-heading">Your Info</h4>
+                      <div class="row register-form">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Email *" value="" id="emailSignUp"/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="password" class="form-control" placeholder="Password *" value="" id="passwordSignUp"/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="First Name *" value="" id="firstNameSignUp"/>
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Last Name *" value="" id="lastNameSignUp"/>
+                              </div>
+
+
+                              
+                              <div class="form-group">
+                                  <div class="maxl">
+                                      <label class="btn btn-primary"> 
+                                          <input type="radio" name="gender" value="male" checked>
+                                          <span> Male </span> 
+                                      </label>
+                                      <label class="btn btn-primary"> 
+                                          <input type="radio" name="gender"  value="female">
+                                          <span>Female </span>
+ 
+                                      </label>
+                                      <div class="col-md-3">
+                                      <button type="submit" class="btn btn-primary" value="Register" id="signUpButton" onclick="window.location.href='dashboard.html'">Submit</button>
+                                        </div>
+                                    </div>
+                              </div>
+                          </div>
+                        
+                          <div class="col-mx-3">
+                          <img src="assets/img/brew.jpg" alt="Card image cap" class="card-img-bottom"/>
+                          </div>
+
+                  <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                      <div class="row register-form">
+                          <div class="col-md-6">
+                             
+                             
+                                
+                            
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
-        <br />
-        <p>Or log in <a href="/login">here</a></p>
       </div>
-    </div>
+
   </div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
+
 
 </body>
 

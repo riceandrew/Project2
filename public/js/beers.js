@@ -31,13 +31,21 @@ $(document).ready(function() {
     // Otherwise we log any errors
     function signUpUser(email, password, firstName, lastName) {
       // This is the connection for e-mail and password data intodb
-      $.post("/api/users", {
+      $.post("/api/signup", {
         username: email,
         password: password,
         first_name: firstName,
         last_name: lastName
       })
-
+        .then(function(data) {
+          window.location.replace("/dashboard");
+          // If there's an error, handle it by throwing up a bootstrap alert
+        })
+        .catch(handleLoginErr());
     }
- });
   
+    function handleLoginErr(err) {
+      $("#alert .msg").text(err.responseJSON);
+      $("#alert").fadeIn(500);
+    }
+  });

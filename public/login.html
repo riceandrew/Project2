@@ -2,40 +2,64 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Login </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
 </head>
 
 <body>
+ 
+<!-- Header -->
+
+      <header class="text-white">
+          <div class="container text-center">
+            <h1>Welcome to the Pub Crawl Austin !</h1>
+            <p class="lead">The #1 way to find you favorite BREWERY</p>
+              </div>
+          </div>        
+</header>
+
+
   <nav class="navbar navbar-default">
+      <div class="alert alert-warning" role="alert">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
     <div class="container-fluid">
       <div class="navbar-header">
       </div>
     </div>
-  </nav>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2>Login Form</h2>
         <form class="login">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+            <label for="exampleInputEmail1" color="text-white">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
+          <button type="submit" class="btn btn-default" id="logInButton" onclick="window.location.href='dashboard.html'">Login</button>
         </form>
         <br />
-        <p>Or sign up <a href="/signup">here</a></p>
+        <p> <button type="button"class="btn btn-warning" onclick="window.location.href='signup.html'">Sign Up</button></p>
+
       </div>
+      <div class="col-lg-6">
+          <img src="assets/img/brew.jpg" alt="Card image cap" width="1600px" height="1000px"  class="card-img-bottom">
+          <div class="text"></div>
+    </div>
     </div>
   </div>
+</nav>
+
+
+  
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
@@ -43,3 +67,6 @@
 </body>
 
 </html>
+
+
+<!-- Login page should linked to the Dashboard.html

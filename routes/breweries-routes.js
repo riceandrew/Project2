@@ -4,7 +4,7 @@ const db = require('../models');
 module.exports = function(app) {
 
 // Add a Brewery
-app.post("/breweries", function(req, res) {
+app.post("/api/breweries", function(req, res) {
 
     db.Brewery.create({
         brewery_name: req.body.brewery_name,
@@ -19,7 +19,7 @@ app.post("/breweries", function(req, res) {
 });
 
 // Get all Breweries
-app.get("/breweries", function(req, res) {
+app.get("/api/breweries", function(req, res) {
 
     db.Brewery.findAll({}).then( function(allBreweries) {
 
@@ -29,7 +29,7 @@ app.get("/breweries", function(req, res) {
 });
 
 // Update a Brewery Name
-app.put("/breweries", function(req, res) {
+app.put("/api/breweries", function(req, res) {
 
     db.Brewery.update({
         brewery_name: req.body.brewery_name,
@@ -48,7 +48,7 @@ app.put("/breweries", function(req, res) {
 //******************************************************************************
 
 // Add a Beer
-app.post("/beers", function(req, res){
+app.post("/api/beers", function(req, res){
 
     db.Beer.create({
       beer_name: req.body.beer_name,
@@ -60,7 +60,7 @@ app.post("/beers", function(req, res){
 });
 
 // Get all beers
-app.get("/beers", function(req, res){
+app.get("/api/beers", function(req, res){
 
     db.Beer.findAll({}).then(function (allBeers){
         res.json(allBeers);
@@ -69,7 +69,7 @@ app.get("/beers", function(req, res){
 });
 
 // Update a beer
-app.put("/beers", function(req, res){
+app.put("/api/beers", function(req, res){
 
     db.Beer.update({
         beer_name: req.body.beer_name,
@@ -89,7 +89,7 @@ app.put("/beers", function(req, res){
 // *******************************************************************************
 
 // Add a User
-app.post("/users", function(req, res){
+app.post("/api/users", function(req, res){
 
     db.User.create({
         username: req.body.username,
@@ -108,7 +108,7 @@ app.post("/users", function(req, res){
 });
 
 // Get all Users
-app.get("/users", function(req, res){
+app.get("/api/users", function(req, res){
 
     db.User.findAll({}).then(function (allUsers) {
         res.json(allUsers);
@@ -117,9 +117,9 @@ app.get("/users", function(req, res){
 });
 
 // Update a User
-app.put("/users", function(req, res){
+app.put("/api/users", function(req, res){
 
-    db.Beer.update({
+    db.User.update({
         username: req.body.username,
         password: req.body.password, 
         first_name: req.body.first_name, 
@@ -143,7 +143,7 @@ app.put("/users", function(req, res){
 });
 
 // Delete a User
-app.delete("/users", function (req, res) {
+app.delete("/api/users", function (req, res) {
 
     db.User.destroy({
       where: {
@@ -152,5 +152,6 @@ app.delete("/users", function (req, res) {
     });
     
 });
+
 
 };
