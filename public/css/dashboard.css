@@ -25,19 +25,13 @@ transform: translate(-50%, -50%);
 
 }
 
-
+#col1
 .navbar-toggler {
   font-size: 15px;
   padding: 8px 10px;
   color: gray;
 }
-  body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: white;
-    background-color: #fc7516;
-  }
+
 
   a {
     color: white;
@@ -48,22 +42,8 @@ transform: translate(-50%, -50%);
     color: white;
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 40;
-  line-height: 1.5;
-  color: WHITE;
-  text-align: left;
 }
-body {
-  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: white;
-  background-color: #fc7516;
-}
+
 .row {
   display: -ms-flexbox;
   display: flex;
@@ -72,15 +52,54 @@ body {
   margin-right: -15px;
   margin-left: -15px;
 }
-.alert-warning {
-  background-color: dodgerblue;
-  border-color: #ff7701;
-  color: #ffffff;
+.col {
+  background-color: #ff7701;
+  border-color: black;
+  color: white;
 }
-element.style {
+.col1 {
+  background-color: dodgerblue;
+  border-color: black;
+  color: white;
+}
+.col2 {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+.col3 {
+  background-color: dodgerblue;
+  border-color: black;
+  color: white;
+}
+.col4 {
+  background-color: dodgerblue;
+  border-color: black;
+  color: white;
+}
+
+#userInfo {
   background-color: dodgerblue;
   text-size-adjust: auto;
+  font-size: 34px;
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: white;
+  text-align: center;
+
 }
+#info  {
+  background-color: dodgerblue;
+  text-size-adjust: auto;
+  font-size: 34px;
+  font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: white;
+  text-align: center;
+
+
+}
+
+
+
 .list-group-item {
   position: relative;
   display: block;
@@ -88,6 +107,6 @@ element.style {
   background-color: #ff7701;
   border: 1px solid rgba(0,0,0,.125);
 }
-element.style {
+h2 {
   background-color: dodgerblue;
 }
