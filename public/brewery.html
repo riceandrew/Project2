@@ -16,8 +16,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Find a brewery..." aria-label="Search">
-        <button class="btn btn-primary" type="submit">Find a Brewery</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Find a brewery..." aria-label="Search" id="findBreweryInputBreweryPage">
+        <button class="btn btn-primary" type="submit" id="findBreweryButtonBreweryPage"  onclick="window.location.href='brewery.html'">Find a Brewery</button>
       </form>
 
     </div>
@@ -40,7 +40,7 @@
 
   <header class="col" class="bg-primary text-white">
     <div class="container text-center">
-      <h1>Brewery Stadistics</h1>
+      <h1>Brewery Statistics</h1>
       <p class="lead">The #1 way to find you favorite BREWERY</p>
         </div>
     </div>
@@ -50,7 +50,7 @@
   <div class="container-fluid">
 
     <div class="row" style="background-color: dodgerblue;">
-      <h2>Brewery Name:</h2>
+      <h2 id="breweryName">Brewery Name:</h2>
     </div>
 
     <div class="row">
